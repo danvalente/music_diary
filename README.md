@@ -3,9 +3,9 @@
 MusicDiary provides a service that allows a user to attach a note to the song they are currently listening to on Spotify.
 Notes are saved in memory as well as persisted to disk using Erlangs built-in DETS tables (for now).
 
-The user must OAuth in to Spotify by visiting `http://localhost:4000` (4000 is the hard-coded port behind which the authorization server sits)
+The user must OAuth in to Spotify by visiting `http://localhost:<port>` (whatever port is specified in config.exs). This is  where the authorization server sits.
 
-The diary server sits behind port 4545 and the endpoint of interest (literally, the only one) is `/take-note`, which accepts POST requests.
+The diary server port is also specified in in `config.exs` and the endpoint of interest (literally, the only one) is `/take-note`, which accepts POST requests.
 
 For example, the request:
 
